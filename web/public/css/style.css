@@ -1,0 +1,59 @@
+.image-container {
+  min-height:100%;
+  overflow:hidden;
+}
+
+.rock{
+    font-family: 'New Rocker', cursive;
+    }
+.bigFont{
+
+	font-size: 7em;
+}
+.midFont{
+	font-size: 2.5em;
+}
+
+.azulwapo{
+	color:#066AAE; 
+}
+
+aside {
+    float: right;
+    padding: 70px 0 30px;
+    position: relative;
+    width: 25%
+}
+aside h2 {
+    color: #888;
+    font-size: 1.8em
+}
+
+section {
+   float: left;
+   padding: 35px 60px 35px 60px;
+   position: relative;
+   width: 70%
+}
+section article {
+   margin: 0 50px 40px;
+   padding: 25px 0 0;
+   position: relative
+}
+section header {
+   font-size: 0.8em;
+   padding: 0;
+}
+section h2 {
+   font-size: 2.3em;
+}
+.header {
+    color: #007e99;
+    font-size: 2.5em;
+    padding: 20px 50px
+}
+footer {
+    clear: both;
+    color: #777;
+    padding: 10px 50px
+}
