@@ -2,43 +2,143 @@
 
 {% block stylesheets %}
 
-    {{parent()}}
-    <link rel="stylesheet" type="text/css" href="{{ asset('public/css/style.css') }}">
-    <link href='https://fonts.googleapis.com/css?family=New+Rocker' rel='stylesheet' type='text/css'>
+{{parent()}}
 
 {% endblock %}
 
 {% block body %}
+<div class="bgded overlay" style="background-image:url({{asset('public/images/demo/backgrounds/01.png')}}"> 
 
-    {{ parent() }}
-    {% if app.session.flashBag.has('success') %}
-        <div class="alert alert-success">
-            {% for msg in app.session.flashBag.get('success') %}
-                    {{ msg }}
-            {% endfor %}
-        </div>
-    {% endif %}
-    <header class="header">
-        <h1 class="rock midFont">Bienvenidos al <br> Ágora Popular</h1> 
-    </header>
-    <section>
-        <h2>Últimas Noticias</h2>
-        <article>
+{{ parent() }}
 
+    <div id="pageintro" class="hoc clear"> 
+        <!-- ################################################################################################ -->
+        <article class="clear">
+          <ul class="nospace clear">
+            <li><a href="#"><i class="fa fa-usb"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-wallet"></i></a></li>
+            <li><a href="#"><i class="fa fa-yelp"></i></a></li>
+            <li><a href="#"><i class="fa fa-weibo"></i></a></li>
+            <li><a href="#"><i class="fa fa-history"></i></a></li>
+          </ul>
+          <h2 class="heading">Mauris ultricies libero</h2>
+          <p>Phasellus tempor viverra metus eu finibus mi sed hendrerit condimentum lorem quis hendrerit maecenas luctus mi vitae nisi dapibus ultrices.</p>
+          <footer><a class="btn" href="#">Hendrerit ullamcorper</a></footer>
         </article>
-    </section>
-    <aside>
-        <h2>Descubre más ...</h2>
-        <ul class="list-unstyled tag-cloud">
-            <li><a href="">Noticias</a></li>
-            <li><a href="">Youtube</a></li>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">RT</a></li>
-            <li><a href="#">HISPAN TV</a></li>
-            <li><a href="#">Tele SUR</a></li>
-            <li><a href="#">Fonavi</a></li>
-        </ul>
-    </aside>
+        <!-- ################################################################################################ -->
+    </div>
+  <!-- ################################################################################################ -->
+</div>
+<!-- End Top Background Image Wrapper -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div class="group cta">
+      <article class="one_third first"><a href="#"><i class="fa fa-globe"></i></a>
+        <h6 class="heading">Volutpat aliquam</h6>
+        <p>Vel ipsum sit amet odio congue elit est morbi leo&hellip;</p>
+      </article>
+      <article class="one_third"><a href="#"><i class="fa fa-tripadvisor"></i></a>
+        <h6 class="heading">Sagittis feugiat</h6>
+        <p>Cras felis ligula ultrices et odio tincidunt eleifend&hellip;</p>
+      </article>
+      <article class="one_third"><a href="#"><i class="fa fa-ge"></i></a>
+        <h6 class="heading">Ornare venenatis</h6>
+        <p>Id felis fringilla accumsan nulla vel sollicitudin non&hellip;</p>
+      </article>
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row6">
+  <div class="hoc container clear"> 
+    <!-- ################################################################################################ -->
+    <div class="center btmspace-50">
+      <h3 class="font-x2 nospace">Dictum diam pharetra</h3>
+      <p class="nospace">Libero suscipit imperdiet mauris egestas nisl ut mi sollicitudin at iaculis odio <a href="#">efficitur aliquam</a>.</p>
+    </div>
+    <ul class="nospace group btmspace-50 elements">
+      <li class="one_third first btmspace-30">
+        <figure><img src="{{asset('public/images/demo/320x240.png')}}" alt="">
+          <figcaption><a href="#">Elementum</a></figcaption>
+        </figure>
+      </li>
+      <li class="one_third btmspace-30">
+        <figure><img src="{{asset('public/images/demo/320x240.png')}}" alt="">
+          <figcaption><a href="#">Pharetra</a></figcaption>
+        </figure>
+      </li>
+      <li class="one_third btmspace-30">
+        <figure><img src="{{asset('public/images/demo/320x240.png')}}" alt="">
+          <figcaption><a href="#">Consectetur</a></figcaption>
+        </figure>
+      </li>
+      <li class="one_third first">
+        <figure><img src="{{asset('public/images/demo/320x240.png')}}" alt="">
+          <figcaption><a href="#">Imperdiet</a></figcaption>
+        </figure>
+      </li>
+      <li class="one_third">
+        <figure><img src="{{asset('public/images/demo/320x240.png')}}" alt="">
+          <figcaption><a href="#">Fringilla</a></figcaption>
+        </figure>
+      </li>
+      <li class="one_third">
+        <figure><img src="{{asset('public/images/demo/320x240.png')}}" alt="">
+          <figcaption><a href="#">Consequat</a></figcaption>
+        </figure>
+      </li>
+    </ul>
+    <p class="nospace center"><a class="btn" href="#">Semper nulla egestas</a></p>
+    <!-- ################################################################################################ -->
+    <div class="clear"></div>
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <section class="hoc container clear"> 
+    <!-- ################################################################################################ -->
+    <div class="center btmspace-50">
+      <h3 class="font-x2 nospace">Lectus vel ex luctus</h3>
+      <p class="nospace">Congue orci maecenas faucibus sapien in bibendum ante velit semper dui id euismod <a href="#">mi metus sit</a>.</p>
+    </div>
+    <div class="group center">
+      <article class="one_third first"><a href="#"><img class="btmspace-30" src="{{asset('public/images/demo/320x210.png')}}" alt=""></a>
+        <time class="block font-xs" datetime="2045-04-06">6<sup>th</sup> April 2045</time>
+        <h2 class="nospace font-x1 bold">Condimentum venenatis</h2>
+        <p>Semper neque vestibulum ut porttitor metus suspendisse hendrerit metus et diam gravida vestibulum sed&hellip;</p>
+        <p class="nospace"><a href="#">Read More &raquo;</a></p>
+      </article>
+      <article class="one_third"><a href="#"><img class="btmspace-30" src="{{asset('public/images/demo/320x210.png')}}" alt=""></a>
+        <time class="block font-xs" datetime="2045-04-05">5<sup>th</sup> April 2045</time>
+        <h2 class="nospace font-x1 bold">Magna vitae pharetra</h2>
+        <p>Feugiat porta diam quis fermentum in ullamcorper ex id aliquet cursus justo lectus egestas urna vel tempor&hellip;</p>
+        <p class="nospace"><a href="#">Read More &raquo;</a></p>
+      </article>
+      <article class="one_third"><a href="#"><img class="btmspace-30" src="{{asset('public/images/demo/320x210.png')}}" alt=""></a>
+        <time class="block font-xs" datetime="2045-04-04">4<sup>th</sup> April 2045</time>
+        <h2 class="nospace font-x1 bold">Donec et ultrices</h2>
+        <p>Elit fusce maximus at mi ligula hendrerit cras ornare lorem sed arcu at gravida nulla lacinia nunc id ante rhoncus&hellip;</p>
+        <p class="nospace"><a href="#">Read More &raquo;</a></p>
+      </article>
+    </div>
+    <!-- ################################################################################################ -->
+  </section>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
     <footer>
         <p>©2016 BGLsoft inc.</p>
     </footer>

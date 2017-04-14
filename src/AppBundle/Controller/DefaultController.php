@@ -43,7 +43,7 @@ class DefaultController extends Controller
      */
     public function galleryAction(Request $request)
     {
-        return new Response("Fotos");
+        return $this->render('default/gallery.html.twig');
     }
 
     /**
