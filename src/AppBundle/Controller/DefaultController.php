@@ -61,4 +61,12 @@ class DefaultController extends Controller
     {
         return new Response("Actividades!");
     }
+
+    /**
+     * @Route("/magazine", name="magazine")
+     */
+    public function magazineAction()
+    {
+        return $this->render('default/magazine.html.twig');
+    }
 }
