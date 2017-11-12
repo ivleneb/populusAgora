@@ -19,3 +19,6 @@
 !/vendor/symfony
 !/vendor/autoload.php
 !/vendor/twig
+!/vendor/sensiolabs
+!/vendor/sensio
+!/vendor/bin
