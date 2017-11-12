@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        {% block title %}
+        Welcome!
+        {% endblock %}
+
+        </title>
+        
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        
+        {% block stylesheets %}
+        <link href="{{asset('public/styles/layout.css')}}" rel="stylesheet" type="text/css" media="all">
+        {% endblock %}
+
+    </head>
+    <body id="top">
+
+        {% block body %}
+        {{ include ('menu.html.twig') }}
+        {% endblock %}
+
+        {{ include ('footer.html.twig') }}
+
+        {% block javascripts %}
+        <!-- JAVASCRIPTS -->
+        <script src="{{asset('public/scripts/jquery.min.js')}}"></script>
+        <script src="{{asset('public/scripts/jquery.backtotop.js')}}"></script>
+        <script src="{{asset('public/scripts/jquery.mobilemenu.js')}}"></script>
+        <!-- IE9 Placeholder Support -->
+        <script src="{{asset('public/scripts/jquery.placeholder.min.js')}}"></script>
+        <!-- / IE9 Placeholder Support -->
+        {% endblock %}
+
+    </body>
+</html>
