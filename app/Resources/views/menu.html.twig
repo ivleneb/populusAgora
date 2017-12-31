@@ -6,10 +6,10 @@
       <div class="fl_left">
         <ul class="nospace">
           <li><a href="#"><i class="fa fa-lg fa-home"></i></a></li>
-          <li><a href="#">Nosotros</a></li>
-          <li><a href="#">Contacto</a></li>
-          <li><a href="#">Intranet</a></li>
-          <li><a href="#">Registrate</a></li>
+          <li><a href="{{ path('about') }}">Nosotros</a></li>
+          <li><a href="{{ path('contact') }}">Contacto</a></li>
+          <li><a href="{{ path('login') }}">Intranet</a></li>
+          <li><a href="{{ path('signup') }}">Registrate</a></li>
         </ul>
       </div>
       <div class="fl_right">
@@ -36,15 +36,14 @@
           <li><a class="drop" href="#">Contenido</a>
             <ul>
               <li><a href="{{ path('gallery') }}">Ágora en Imágenes </a></li>
-              <li><a href="pages/full-width.html">Prensa</a></li>
-              <li><a href="pages/sidebar-left.html">Eventos</a></li>
-              <li><a href="pages/sidebar-right.html">Revista del Ágora Popular</a></li>
-              <li><a href="pages/basic-grid.html">Articulos y Ensayos</a></li>
-              <li><a href="pages/basic-grid.html">Foro</a></li>
-              <li><a href="pages/basic-grid.html">Apps y Herramientas</a></li>
+              <li><a href="{{ path('press') }}">Prensa</a></li>
+              <li><a href="{{ path('activity')}}">Eventos</a></li>
+              <li><a href="{{ path('magazine') }}">Revista del Ágora Popular</a></li>
+              <li><a href="{{ path('forum') }}">Foro</a></li>
+              <li><a href="{{ path('apps') }}">Apps y Herramientas</a></li>
             </ul>
           </li>
-          <li><a class="drop" href="#">Busqueda</a>
+          <li><a class="drop" href="{{ path('search') }}">Busqueda</a>
             <ul>
               <li><a href="#">Conversatorios</a></li>
               <li><a href="#">Ensayos y Artículos</a></li>
@@ -58,8 +57,8 @@
               </li>
             </ul>
           </li>
-          <li><a href="#">Prensa popular</a></li>
-          <li><a href="#">Apps</a></li>
+          <li><a href="{{ path('press') }}">Prensa popular</a></li>
+          <li><a href="{{ path('apps') }}">Apps</a></li>
         </ul>
       </nav>
       <!-- ################################################################################################ -->

@@ -14,59 +14,106 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
-        // replace this example code with whatever you need
-        /*return $this->render('default/index.html.twig', [
-            'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..').DIRECTORY_SEPARATOR,
-        ]);*/
-
+        //Initial page
         return $this->render('default/index.html.twig');
     }
 
     /**
-     * @Route("/about", name="about")
+     * @Route("/acerca-de-nosotros", name="about")
      */
     public function aboutAction(Request $request)
     {
-        return new Response("Who are us?");
+        //Statements, history and official information
+        return $this->render('default/about.html.twig');
     }
 
     /**
-     * @Route("/statements", name="statements")
+     * @Route("/contactanos", name="contact")
      */
-    public function statementsAction(Request $request)
+    public function contactAction(Request $request)
     {
-        return new Response("Mission and Vision");
+        //Email us
+        return $this->render('default/contactus.html.twig');
     }
 
     /**
-     * @Route("/gallery", name="gallery")
+     * @Route("/cuenta/registro", name="signup")
+     */
+    public function signUpAction(Request $request)
+    {
+        //SingUp or registration
+        return $this->render('default/register.html.twig');
+    }
+
+    /**
+     * @Route("cuenta/ingreso", name="login")
+     */
+    public function loginAction(Request $request)
+    {
+        //Log in to account or intranet
+        return $this->render('default/login.html.twig');
+    }
+
+    /**
+     * @Route("/agora-en-imagenes", name="gallery")
      */
     public function galleryAction(Request $request)
     {
+        //Show image repository of agora
         return $this->render('default/gallery.html.twig');
     }
 
     /**
-     * @Route("/join", name="join")
+     * @Route("/actividades-eventos", name="activity")
      */
-    public function joinUsAction(Request $request)
+    public function activityAction(Request $request)
     {
-        return new Response("Unete!");
+        //List of events from us and friend org 
+        return $this->render('default/activity.html.twig');
     }
 
     /**
-     * @Route("/activity", name="activity")
-     */
-    public function activitiesAction(Request $request)
-    {
-        return new Response("Actividades!");
-    }
-
-    /**
-     * @Route("/magazine", name="magazine")
+     * @Route("/revista", name="magazine")
      */
     public function magazineAction()
     {
+        //Magazine science social and abstract section
         return $this->render('default/magazine.html.twig');
+    }
+
+    /**
+     * @Route("/prensa", name="press")
+     */
+    public function pressAction()
+    {
+        //Newsṕaper and press section
+        return $this->render('default/press.html.twig');
+    }
+
+    /**
+     * @Route("/foro", name="forum")
+     */
+    public function forumAction()
+    {
+        //Forum to interact
+        return $this->render('default/forum.html.twig');
+    }
+
+    /**
+     * @Route("/aplicaciones", name="apps")
+     */
+    public function appsAction()
+    {
+        //See the apps available of agora developers and friends
+        return $this->render('default/apps.html.twig');
+    }
+
+    /**
+     * @Route("/busqueda-articulos-noticias", name="search")
+     */
+    public function searchAction()
+    {
+        //Search engine
+        return $this->render('default/search.html.twig');
     }
 }
