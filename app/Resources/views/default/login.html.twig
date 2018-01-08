@@ -1,5 +1,9 @@
 {% extends 'base.html.twig' %}
- 
+
+{% block title %}
+    Agora | Ingresa
+{% endblock %}
+
 {% block stylesheets %}
 {{parent()}}
 {% endblock %}
@@ -135,20 +139,4 @@
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-    <footer>
-        <p>©2016 BGLsoft inc.</p>
-    </footer>
-{% endblock %}
-
-{% block javascripts %}
-{{ parent() }}
-<script>
-function mouseOver() {
-    document.getElementById("dscr").style.display = "none";
-}
-
-function mouseOut() {
-    document.getElementById("dscr").style.display = "block";
-}
-</script>
 {% endblock %}

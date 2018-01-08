@@ -1,5 +1,9 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}
+    Agora | Galeria
+{% endblock %}
+
 {% block stylesheets %}
 {{ parent() }}
 {% endblock %}
@@ -7,7 +11,7 @@
 {% block body %}
 <div class="bgded overlay" style="background-image:url({{asset('public/images/demo/backgrounds/01.png')}}"> 
 {{ parent() }}
-{{ include ('menu2.html.twig') }}
+{#{{ include ('menu2.html.twig') }}#}
   <!-- ################################################################################################ -->
 </div>
 <!-- End Top Background Image Wrapper -->
@@ -68,6 +72,4 @@
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-</body>
-</html>
 {% endblock %}

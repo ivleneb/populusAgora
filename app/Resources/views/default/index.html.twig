@@ -2,15 +2,64 @@
  
 {% block stylesheets %}
 {{parent()}}
+<link href="{{asset('public/styles/w3.css')}}" rel="stylesheet" type="text/css" media="all">
+<style>
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+</style>
 {% endblock %}
 
 {% block body %}
-<div class="bgded overlay" style="background-image:url({{asset('public/images/agora_ban.jpg')}}"> 
+<!--<div class="bgded overlay" style="background-image:url({{asset('public/images/agora_ban.jpg')}}"> -->
+<div class="bgded overlay">   
 {{ parent() }}
-    <div id="pageintro" class="hoc clear" style="padding-top:40%"> 
-        <!-- ################################################################################################ -->
+    <div class="w3-content w3-section w3-display-container" style="max-width:800px;">
+      <div class="mySlides w3-display-container w3-animate-left">
+        <img src="{{asset('public/images/agoraban_w410.png')}}" style="width:100%; height:410px">
+      </div>
+      <div class="mySlides w3-display-container w3-animate-left">
+        <img src="{{asset('public/images/banner_init/amauta.jpg')}}" style="width:100%; height:410px">
+        <div class="w3-display-right w3-large w3-container w3-padding-16">
+        <p><span class="w3-green"> Revista Popular</span></p>
+        <p><span class="w3-green">La nueva "El Amauta"</span></p>
+        </div>
+      </div>
+      <div class="mySlides w3-display-container w3-animate-left">
+        <img src="{{asset('public/images/banner_init/aniver.jpg')}}" style="width:100%; height:410px">
+        <div class="w3-display-right w3-large w3-container w3-padding-16">
+        <p><span class="w3-green"> Nueva App</span></p>
+        <p><span class="w3-green">para hacer seguimiento de tu político</span></p>
+        </div>
+      </div>
+      <div class="mySlides w3-display-container w3-animate-left">
+        <img src="{{asset('public/images/banner_init/narko.jpeg')}}" style="width:100%; height:410px">
+        <div class="w3-display-right w3-large w3-container w3-padding-16">
+        <p><span class="w3-black"> Nueva App</span></p>
+        <p><span class="w3-black">para hacer seguimiento de tu político</span></p>
+        </div>
+      </div>
+      <div class="mySlides w3-display-container w3-animate-left">
+        <img src="{{asset('public/images/banner_init/apps.png')}}" style="height:410px">
+        <div class="w3-display-right w3-large w3-container w3-padding-16">
+        <p><span class="w3-black"> Reventonazo</span></p>
+        <p><span class="w3-black">por el aniversario 10 del Ágora</span></p>
+        </div>
+      </div>
+      <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+        <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+        <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+        <span class="w3-badge demo w3-border w3-transparent w3-hover-white"></span>
+        <span class="w3-badge demo w3-border w3-transparent w3-hover-white"></span>
+        <span class="w3-badge demo w3-border w3-transparent w3-hover-white"></span>
+        <span class="w3-badge demo w3-border w3-transparent w3-hover-white"></span>
+        <span class="w3-badge demo w3-border w3-transparent w3-hover-white"></span>
+      </div>
+    </div>
+    <div id="pageintro" class="hoc clear" style="padding-top:0"> 
+
         <article class="clear">
-         <!-- <ul class="nospace clear">
+         <ul class="nospace clear">
             <li><a href="#"><i class="fa fa-usb"></i></a></li>
             <li><a href="#"><i class="fa fa-google-wallet"></i></a></li>
             <li><a href="#"><i class="fa fa-yelp"></i></a></li>
@@ -18,11 +67,11 @@
             <li><a href="#"><i class="fa fa-history"></i></a></li>
           </ul>
           <h2 class="heading">50 Años de cultura.</h2>
-          <p>PPk Ladrón.</p>-->
           <footer><a class="btn" href="#">Descubre tu historia</a></footer>
         </article>
-        <!-- ################################################################################################ -->
     </div>
+
+
   <!-- ################################################################################################ -->
 </div>
 <!-- End Top Background Image Wrapper -->
@@ -107,14 +156,14 @@
     <!-- ################################################################################################ -->
     <div class="center btmspace-50">
       <h3 class="font-x2 nospace">Prensa Popular</h3>
-      <p class="nospace">Los últimos acontecimientos nacionalñes e internacionales, analizados con la <a href="#">crítica conciente</a> que nos caracteriza.</p>
+      <p class="nospace">Los últimos acontecimientos nacionales e internacionales, analizados con la <a href="#">crítica conciente</a> que nos caracteriza.</p>
     </div>
     <div class="group center">
       <article class="one_third first"><a href="#"><img class="btmspace-30" src="{{asset('public/images/demo/320x210.png')}}" alt=""></a>
-        <time class="block font-xs" datetime="2045-04-06">6<sup>th</sup> April 2045</time>
-        <h2 class="nospace font-x1 bold">Condimentum venenatis</h2>
-        <p>Semper neque vestibulum ut porttitor metus suspendisse hendrerit metus et diam gravida vestibulum sed&hellip;</p>
-        <p class="nospace"><a href="#">Read More &raquo;</a></p>
+        <time class="block font-xs" datetime="2018-01-09">9<sup>th</sup> Enero 2018</time>
+        <h2 class="nospace font-x1 bold">Pronunciamiento</h2>
+        <p>El Ágora popular se pronuncia sobre la actual coyuntura: Vacancia e indulto&hellip;</p>
+        <p class="nospace"><a href="#">Leer más &raquo;</a></p>
       </article>
       <article class="one_third"><a href="#"><img class="btmspace-30" src="{{asset('public/images/demo/320x210.png')}}" alt=""></a>
         <time class="block font-xs" datetime="2045-04-05">5<sup>th</sup> April 2045</time>
@@ -135,20 +184,61 @@
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-    <footer>
-        <p>©2016 BGLsoft inc.</p>
-    </footer>
 {% endblock %}
 
 {% block javascripts %}
-{{ parent() }}
-<script>
-function mouseOver() {
-    document.getElementById("dscr").style.display = "none";
-}
+  {{ parent() }}
+  <script>
+  var myIndex = 0;
+  var myVar;
+  var mylength;
+  var mystyle = " w3-animate-left";
+  carousel();
 
-function mouseOut() {
-    document.getElementById("dscr").style.display = "block";
-}
-</script>
+  function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      mylength = x.length
+      for (i = 0; i < mylength; i++) {
+         x[i].style.display = "none";  
+      }
+      //myIndex++;
+      if (myIndex > mylength-1) {myIndex = 0}    
+      x[myIndex].className = x[myIndex].className.replace(" w3-animate-left", mystyle);
+      x[myIndex].className = x[myIndex].className.replace(" w3-animate-right", mystyle);
+      x[myIndex].style.display = "block";  
+      showDivs(0);
+      myIndex++;
+      myVar = setTimeout(carousel, 6000);    
+  }
+
+  function plusDivs(n) {
+    clearTimeout(myVar);
+    if(n<0)
+    {
+      mystyle_old = mystyle;
+      mystyle = " w3-animate-right";
+      myIndex -= 2;
+
+      if (myIndex<0) {myIndex = mylength + myIndex;}
+    }
+    else
+    {
+      mystyle = " w3-animate-left";
+    }
+    carousel();
+  }
+
+  function showDivs(n) {
+
+    var i;
+    var dots = document.getElementsByClassName("demo");
+
+    for (i = 0; i < dots.length; i++) {
+       dots[i].className = dots[i].className.replace(" w3-white", "");
+    }
+    dots[myIndex].className += " w3-white";
+  }
+
+  </script>
 {% endblock %}

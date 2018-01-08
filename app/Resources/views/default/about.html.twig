@@ -1,28 +1,21 @@
 {% extends 'base.html.twig' %}
- 
-{% block stylesheets %}
-{{parent()}}
+
+{% block title %}
+Agora | Nosotros
 {% endblock %}
 
 {% block body %}
-<div class="bgded overlay" style="background-image:url({{asset('public/images/demo/backgrounds/01.png')}}"> 
-{{ parent() }}
-    <div id="pageintro" class="hoc clear"> 
-        <!-- ################################################################################################ -->
-        <article class="clear">
-          <ul class="nospace clear">
-            <li><a href="#"><i class="fa fa-usb"></i></a></li>
-            <li><a href="#"><i class="fa fa-google-wallet"></i></a></li>
-            <li><a href="#"><i class="fa fa-yelp"></i></a></li>
-            <li><a href="#"><i class="fa fa-weibo"></i></a></li>
-            <li><a href="#"><i class="fa fa-history"></i></a></li>
-          </ul>
-          <h2 class="heading">Mauris ultricies libero</h2>
-          <p>Phasellus tempor viverra metus eu finibus mi sed hendrerit condimentum lorem quis hendrerit maecenas luctus mi vitae nisi dapibus ultrices.</p>
-          <footer><a class="btn" href="#">Hendrerit ullamcorper</a></footer>
-        </article>
-        <!-- ################################################################################################ -->
-    </div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- Top Background Image Wrapper -->
+<div class="bgded overlay" style="background-image:url('../images/demo/backgrounds/01.png');"> 
+  <!-- ################################################################################################ -->
+  {{ parent() }}
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+{#{{ include ('menu2.html.twig')}}#}
   <!-- ################################################################################################ -->
 </div>
 <!-- End Top Background Image Wrapper -->
@@ -33,19 +26,86 @@
   <main class="hoc container clear"> 
     <!-- main body -->
     <!-- ################################################################################################ -->
-    <div class="group cta">
-      <article class="one_third first"><a href="#"><i class="fa fa-globe"></i></a>
-        <h6 class="heading">Volutpat aliquam</h6>
-        <p>Vel ipsum sit amet odio congue elit est morbi leo&hellip;</p>
-      </article>
-      <article class="one_third"><a href="#"><i class="fa fa-tripadvisor"></i></a>
-        <h6 class="heading">Sagittis feugiat</h6>
-        <p>Cras felis ligula ultrices et odio tincidunt eleifend&hellip;</p>
-      </article>
-      <article class="one_third"><a href="#"><i class="fa fa-ge"></i></a>
-        <h6 class="heading">Ornare venenatis</h6>
-        <p>Id felis fringilla accumsan nulla vel sollicitudin non&hellip;</p>
-      </article>
+    <div class="sidebar one_quarter first"> 
+      <!-- ################################################################################################ -->
+      <h6>Acerca de ...</h6>
+      <nav class="sdb_holder">
+        <ul>
+          <li><a onclick="show(0); hide(1,2,3)" href="#">Nosotros</a></li>
+          <li><a onclick="show(1); hide(0,2,3)" href="#">Nuestra historia</a></li>
+          <li><a onclick="show(2); hide(0,1,3)" href="#">Nuestros principios</a></li>
+          <li><a onclick="show(3); hide(0,1,2)" href="#">Nuestras actividades</a></li>
+        </ul>
+      </nav>
+      <!-- ################################################################################################ -->
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <div class="content three_quarter"> 
+      <!-- ################################################################################################ -->
+      <div id="comments">
+        <ul>
+          <li id="0" style="display:block">
+            <article>
+              <header>
+                <h2>El Ágora Popular</h2>
+              </header>
+              <div class="comcont">
+                <p>La asociación cultural “Agora Popular de la Plaza San Martín” es una asociación sin fines de lucro, y está inscrita en el Registro de Personas Jurídicas (SUNARP) bajo la partida electrónica 13934264.</p>
+                <p>
+                Como asociación cultural, tiene como fin la concientización social, y se compone por dos órganos: el órgano cultural, que se encarga de la acción social mediante la generación de debates públicos y acciones culturales, y el órgano estudiantil, que se encarga de la difusión y producción intelectual de la comunidad académica.
+                </p>
+                <p>
+                El ágora cultural popular es el parlamento del pueblo, donde personas de a pie nos reunimos a debatir sobre política, sociedad, economía, filosofía, etc., contrastar ideas, llegar a conclusiones y generar conciencia social. Se debaten temas de interés nacional e internacional. Además, se presenta la cultura como parte importante para el desarrollo del país.
+                </p>
+                <p>
+                Existen ágoras al interior del país y en el extranjero. En especial, el espacio de la Plaza San Martín fue ganado a punta de palos, golpes y perdigones con las autoridades que se oponían al fin de estos espacios, pero al final, se pudo concretar este hecho; pudimos establecer nuestro parlamento popular y hasta el día de hoy, desde hace más de 60 años, el ágora ha recibido históricas visitas.
+                </p>
+                <p>
+                El ágora popular tiene la finalidad de establecer debates públicos y generar conciencia social. El ágora popular se encarga de concientizar a la población mediante el debate y la polémica; darles una visión amplia sobre la realidad para la cultura popular.
+                </p>
+                <p>
+                El ágora cultural popular no es un lugar, es un movimiento social, por lo tanto, si deseas establecer un ágora, ¡hazlo!, pero comunícate con la asociación para brindarte la información necesaria que permita concretar este fin.
+                </p>
+                <p>
+                Así como el ágora cultural popular realiza labor social mediante los debates, también tiene representación en las luchas justas, y para eso necesitamos estar organizados y en contacto para acordar acciones en conjunto.
+                </p>
+              </div>
+            </article>
+          </li>
+          <li id="1" style="display:none">
+            <article>
+              <header>
+                <h2>Nuestra Historia</h2>
+              </header>
+              <div class="comcont">
+                <p>This is an example of a comment made on a post. You can either edit the comment, delete the comment or reply to the comment. Use this as a place to respond to the post or to share what you are thinking.</p>
+              </div>
+            </article>
+          </li>
+          <li id="2" style="display:none">
+            <article>
+              <header>
+                <h2>Principios de Vida en Sociedad</h2>
+              </header>
+              <div class="comcont">
+                <p>This is an example of a comment made on a post. You can either edit the comment, delete the comment or reply to the comment. Use this as a place to respond to the post or to share what you are thinking.</p>
+              </div>
+            </article>
+          </li>
+          <li id="3" style="display:none">
+            <article>
+              <header>
+                <h2>Nuestras Actividades</h2>
+              </header>
+              <div class="comcont">
+                <p>This is an example of a comment made on a post. You can either edit the comment, delete the comment or reply to the comment. Use this as a place to respond to the post or to share what you are thinking.</p>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </div>
+      <!-- ################################################################################################ -->
     </div>
     <!-- ################################################################################################ -->
     <!-- / main body -->
@@ -55,87 +115,19 @@
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-<div class="wrapper row6">
-  <div class="hoc container clear"> 
-    <!-- ################################################################################################ -->
-    <div class="center btmspace-50">
-      <h3 class="font-x2 nospace">Dictum diam pharetra</h3>
-      <p class="nospace">Libero suscipit imperdiet mauris egestas nisl ut mi sollicitudin at iaculis odio <a href="#">efficitur aliquam</a>.</p>
-    </div>
-    <ul class="nospace group btmspace-50 elements">
-      <li class="one_third first btmspace-30">
-        <figure><img src="{{asset('public/images/demo/320x240.png')}}" alt="">
-          <figcaption><a href="#">Elementum</a></figcaption>
-        </figure>
-      </li>
-      <li class="one_third btmspace-30">
-        <figure><img src="{{asset('public/images/demo/320x240.png')}}" alt="">
-          <figcaption><a href="#">Pharetra</a></figcaption>
-        </figure>
-      </li>
-      <li class="one_third btmspace-30">
-        <figure><img src="{{asset('public/images/demo/320x240.png')}}" alt="">
-          <figcaption><a href="#">Consectetur</a></figcaption>
-        </figure>
-      </li>
-      <li class="one_third first">
-        <figure><img src="{{asset('public/images/demo/320x240.png')}}" alt="">
-          <figcaption><a href="#">Imperdiet</a></figcaption>
-        </figure>
-      </li>
-      <li class="one_third">
-        <figure><img src="{{asset('public/images/demo/320x240.png')}}" alt="">
-          <figcaption><a href="#">Fringilla</a></figcaption>
-        </figure>
-      </li>
-      <li class="one_third">
-        <figure><img src="{{asset('public/images/demo/320x240.png')}}" alt="">
-          <figcaption><a href="#">Consequat</a></figcaption>
-        </figure>
-      </li>
-    </ul>
-    <p class="nospace center"><a class="btn" href="#">Semper nulla egestas</a></p>
-    <!-- ################################################################################################ -->
-    <div class="clear"></div>
-  </div>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row3">
-  <section class="hoc container clear"> 
-    <!-- ################################################################################################ -->
-    <div class="center btmspace-50">
-      <h3 class="font-x2 nospace">Lectus vel ex luctus</h3>
-      <p class="nospace">Congue orci maecenas faucibus sapien in bibendum ante velit semper dui id euismod <a href="#">mi metus sit</a>.</p>
-    </div>
-    <div class="group center">
-      <article class="one_third first"><a href="#"><img class="btmspace-30" src="{{asset('public/images/demo/320x210.png')}}" alt=""></a>
-        <time class="block font-xs" datetime="2045-04-06">6<sup>th</sup> April 2045</time>
-        <h2 class="nospace font-x1 bold">Condimentum venenatis</h2>
-        <p>Semper neque vestibulum ut porttitor metus suspendisse hendrerit metus et diam gravida vestibulum sed&hellip;</p>
-        <p class="nospace"><a href="#">Read More &raquo;</a></p>
-      </article>
-      <article class="one_third"><a href="#"><img class="btmspace-30" src="{{asset('public/images/demo/320x210.png')}}" alt=""></a>
-        <time class="block font-xs" datetime="2045-04-05">5<sup>th</sup> April 2045</time>
-        <h2 class="nospace font-x1 bold">Magna vitae pharetra</h2>
-        <p>Feugiat porta diam quis fermentum in ullamcorper ex id aliquet cursus justo lectus egestas urna vel tempor&hellip;</p>
-        <p class="nospace"><a href="#">Read More &raquo;</a></p>
-      </article>
-      <article class="one_third"><a href="#"><img class="btmspace-30" src="{{asset('public/images/demo/320x210.png')}}" alt=""></a>
-        <time class="block font-xs" datetime="2045-04-04">4<sup>th</sup> April 2045</time>
-        <h2 class="nospace font-x1 bold">Donec et ultrices</h2>
-        <p>Elit fusce maximus at mi ligula hendrerit cras ornare lorem sed arcu at gravida nulla lacinia nunc id ante rhoncus&hellip;</p>
-        <p class="nospace"><a href="#">Read More &raquo;</a></p>
-      </article>
-    </div>
-    <!-- ################################################################################################ -->
-  </section>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-    <footer>
-        <p>©2016 BGLsoft inc.</p>
-    </footer>
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script>
+function show(id) {
+    document.getElementById(id).style.display = "block";
+}
+
+function hide(id1, id2, id3) {
+    document.getElementById(id1).style.display = "none";
+    document.getElementById(id2).style.display = "none";
+    document.getElementById(id3).style.display = "none";
+}
+</script>
 {% endblock %}
