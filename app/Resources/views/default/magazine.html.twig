@@ -6,9 +6,9 @@
 
 {% block body %}
 
-<div class="bgded overlay" style="background-image:url('../images/demo/backgrounds/01.png');"> 
-  <!-- ################################################################################################ -->
-  {{ parent()}}
+<div class="bgded overlay"> 
+<!--<div class="bgded overlay" style="background-image:url({{asset('public/images/demo/backgrounds/01.png')}}"> -->
+{{ parent()}}
 
   {#{{include('menu2.html.twig')}}#}
 </div>

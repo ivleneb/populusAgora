@@ -15,31 +15,31 @@
 <div class="bgded overlay">   
 {{ parent() }}
     <div class="w3-content w3-section w3-display-container" style="max-width:800px;">
-      <div class="mySlides w3-display-container w3-animate-left">
+      <div class="mySlides w3-display-container w3-animate-left" style="display:none;">
         <img src="{{asset('public/images/agoraban_w410.png')}}" style="width:100%; height:410px">
       </div>
-      <div class="mySlides w3-display-container w3-animate-left">
+      <div class="mySlides w3-display-container w3-animate-left" style="display:none;">
         <img src="{{asset('public/images/banner_init/amauta.jpg')}}" style="width:100%; height:410px">
         <div class="w3-display-right w3-large w3-container w3-padding-16">
         <p><span class="w3-green"> Revista Popular</span></p>
         <p><span class="w3-green">La nueva "El Amauta"</span></p>
         </div>
       </div>
-      <div class="mySlides w3-display-container w3-animate-left">
+      <div class="mySlides w3-display-container w3-animate-left" style="display:none;">
         <img src="{{asset('public/images/banner_init/aniver.jpg')}}" style="width:100%; height:410px">
         <div class="w3-display-right w3-large w3-container w3-padding-16">
         <p><span class="w3-green"> Nueva App</span></p>
         <p><span class="w3-green">para hacer seguimiento de tu político</span></p>
         </div>
       </div>
-      <div class="mySlides w3-display-container w3-animate-left">
+      <div class="mySlides w3-display-container w3-animate-left" style="display:none;">
         <img src="{{asset('public/images/banner_init/narko.jpeg')}}" style="width:100%; height:410px">
         <div class="w3-display-right w3-large w3-container w3-padding-16">
         <p><span class="w3-black"> Nueva App</span></p>
         <p><span class="w3-black">para hacer seguimiento de tu político</span></p>
         </div>
       </div>
-      <div class="mySlides w3-display-container w3-animate-left">
+      <div class="mySlides w3-display-container w3-animate-left" style="display:none;">
         <img src="{{asset('public/images/banner_init/apps.png')}}" style="height:410px">
         <div class="w3-display-right w3-large w3-container w3-padding-16">
         <p><span class="w3-black"> Reventonazo</span></p>
@@ -190,6 +190,7 @@
   {{ parent() }}
   <script>
   var myIndex = 0;
+  var prevIndex = 0;
   var myVar;
   var mylength;
   var mystyle = " w3-animate-left";
@@ -199,15 +200,17 @@
       var i;
       var x = document.getElementsByClassName("mySlides");
       mylength = x.length
-      for (i = 0; i < mylength; i++) {
+      /*for (i = 0; i < mylength; i++) {
          x[i].style.display = "none";  
-      }
+      }*/
+      x[prevIndex].style.display = "none"; 
       //myIndex++;
-      if (myIndex > mylength-1) {myIndex = 0}    
+      if (myIndex > mylength-1) {myIndex = 0}
+      x[myIndex].className = x[myIndex].className.replace(" w3-animate-right", mystyle);    
       x[myIndex].className = x[myIndex].className.replace(" w3-animate-left", mystyle);
-      x[myIndex].className = x[myIndex].className.replace(" w3-animate-right", mystyle);
+      showDivs();
       x[myIndex].style.display = "block";  
-      showDivs(0);
+      prevIndex = myIndex;
       myIndex++;
       myVar = setTimeout(carousel, 6000);    
   }
@@ -229,7 +232,7 @@
     carousel();
   }
 
-  function showDivs(n) {
+  function showDivs() {
 
     var i;
     var dots = document.getElementsByClassName("demo");
