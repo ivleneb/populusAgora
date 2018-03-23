@@ -55,7 +55,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/agora-en-imagenes", name="gallery")
+     * @Route("/discursos-publicos", name="gallery")
      */
     public function galleryAction(Request $request)
     {

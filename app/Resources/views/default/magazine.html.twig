@@ -1,16 +1,23 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-    Agora | Revista
+Agora | Nosotros
 {% endblock %}
 
 {% block body %}
-
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- Top Background Image Wrapper -->
 <div class="bgded overlay"> 
 <!--<div class="bgded overlay" style="background-image:url({{asset('public/images/demo/backgrounds/01.png')}}"> -->
-{{ parent()}}
-
-  {#{{include('menu2.html.twig')}}#}
+  <!-- ################################################################################################ -->
+{{ parent() }}
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+{#{{ include ('menu2.html.twig')}}#}
+  <!-- ################################################################################################ -->
 </div>
 <!-- End Top Background Image Wrapper -->
 <!-- ################################################################################################ -->
@@ -20,181 +27,71 @@
   <main class="hoc container clear"> 
     <!-- main body -->
     <!-- ################################################################################################ -->
-    <div class="content three_quarter first"> 
+    <div class="sidebar one_quarter first"> 
       <!-- ################################################################################################ -->
-      <h1>&lt;h1&gt; to &lt;h6&gt; - Headline Colour and Size Are All The Same</h1>
-      <img class="imgr borderedbox inspace-5" src="../images/demo/imgr.gif" alt="">
-      <p>Aliquatjusto quisque nam consequat doloreet vest orna partur scetur portortis nam. Metadipiscing eget facilis elit sagittis felisi eger id justo maurisus convallicitur.</p>
-      <p>Dapiensociis <a href="#">temper donec auctortortis cumsan</a> et curabitur condis lorem loborttis leo. Ipsumcommodo libero nunc at in velis tincidunt pellentum tincidunt vel lorem.</p>
-      <img class="imgl borderedbox inspace-5" src="../images/demo/imgl.gif" alt="">
-      <p>This is a W3C compliant free website template from <a href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a>. For full terms of use of this template please read our <a href="http://www.os-templates.com/template-terms">website template licence</a>.</p>
-      <p>You can use and modify the template for both personal and commercial use. You must keep all copyright information and credit links in the template and associated files. For more website templates visit our <a href="http://www.os-templates.com/">free website templates</a> section.</p>
-      <p>Portortornec condimenterdum eget consectetuer condis consequam pretium pellus sed mauris enim. Puruselit mauris nulla hendimentesque elit semper nam a sapien urna sempus.</p>
-      <h1>Table(s)</h1>
-      <div class="scrollable">
-        <table>
-          <thead>
-            <tr>
-              <th>Header 1</th>
-              <th>Header 2</th>
-              <th>Header 3</th>
-              <th>Header 4</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><a href="#">Value 1</a></td>
-              <td>Value 2</td>
-              <td>Value 3</td>
-              <td>Value 4</td>
-            </tr>
-            <tr>
-              <td>Value 5</td>
-              <td>Value 6</td>
-              <td>Value 7</td>
-              <td><a href="#">Value 8</a></td>
-            </tr>
-            <tr>
-              <td>Value 9</td>
-              <td>Value 10</td>
-              <td>Value 11</td>
-              <td>Value 12</td>
-            </tr>
-            <tr>
-              <td>Value 13</td>
-              <td><a href="#">Value 14</a></td>
-              <td>Value 15</td>
-              <td>Value 16</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div id="comments">
-        <h2>Comments</h2>
+      <h6>Acerca de la revista</h6>
+      <nav class="sdb_holder">
         <ul>
-          <li>
-            <article>
-              <header>
-                <figure class="avatar"><img src="../images/demo/avatar.png" alt=""></figure>
-                <address>
-                By <a href="#">A Name</a>
-                </address>
-                <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>
-              </header>
-              <div class="comcont">
-                <p>This is an example of a comment made on a post. You can either edit the comment, delete the comment or reply to the comment. Use this as a place to respond to the post or to share what you are thinking.</p>
-              </div>
-            </article>
-          </li>
-          <li>
-            <article>
-              <header>
-                <figure class="avatar"><img src="../images/demo/avatar.png" alt=""></figure>
-                <address>
-                By <a href="#">A Name</a>
-                </address>
-                <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>
-              </header>
-              <div class="comcont">
-                <p>This is an example of a comment made on a post. You can either edit the comment, delete the comment or reply to the comment. Use this as a place to respond to the post or to share what you are thinking.</p>
-              </div>
-            </article>
-          </li>
-          <li>
-            <article>
-              <header>
-                <figure class="avatar"><img src="../images/demo/avatar.png" alt=""></figure>
-                <address>
-                By <a href="#">A Name</a>
-                </address>
-                <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>
-              </header>
-              <div class="comcont">
-                <p>This is an example of a comment made on a post. You can either edit the comment, delete the comment or reply to the comment. Use this as a place to respond to the post or to share what you are thinking.</p>
-              </div>
-            </article>
-          </li>
+          <li><a onclick="show(0); hide(1,2,3)" href="#">Motivación</a></li>
+          <!--<li><a onclick="show(1); hide(0,2,3)" href="#">Nuestra historia</a></li>
+          <li><a onclick="show(2); hide(0,1,3)" href="#">Nuestros principios</a></li>
+          <li><a onclick="show(3); hide(0,1,2)" href="#">Nuestras actividades</a></li>-->
         </ul>
-        <h2>Write A Comment</h2>
-        <form action="#" method="post">
-          <div class="one_third first">
-            <label for="name">Name <span>*</span></label>
-            <input type="text" name="name" id="name" value="" size="22" required>
-          </div>
-          <div class="one_third">
-            <label for="email">Mail <span>*</span></label>
-            <input type="email" name="email" id="email" value="" size="22" required>
-          </div>
-          <div class="one_third">
-            <label for="url">Website</label>
-            <input type="url" name="url" id="url" value="" size="22">
-          </div>
-          <div class="block clear">
-            <label for="comment">Your Comment</label>
-            <textarea name="comment" id="comment" cols="25" rows="10"></textarea>
-          </div>
-          <div>
-            <input type="submit" name="submit" value="Submit Form">
-            &nbsp;
-            <input type="reset" name="reset" value="Reset Form">
-          </div>
-        </form>
-      </div>
+      </nav>
       <!-- ################################################################################################ -->
     </div>
     <!-- ################################################################################################ -->
     <!-- ################################################################################################ -->
-    <div class="sidebar one_quarter"> 
+    <div class="content three_quarter"> 
       <!-- ################################################################################################ -->
-      <h6>Lorem ipsum dolor</h6>
-      <nav class="sdb_holder">
+      <div id="comments">
         <ul>
-          <li><a href="#">Navigation - Level 1</a></li>
-          <li><a href="#">Navigation - Level 1</a>
-            <ul>
-              <li><a href="#">Navigation - Level 2</a></li>
-              <li><a href="#">Navigation - Level 2</a></li>
-            </ul>
+          <li id="0" style="display:block">
+            <article>
+              <header>
+                <h2>REVISTA DE LA AC ÁGORA</h2>
+              </header>
+              <div class="comcont"> 
+<p>Se tiene entendido que la tradición más importante en las aulas universitarias está referida a la investigación. Muchos años de estudio en pregrado nos lleva, en el mejor de los casos, a concluir con un proyecto de tesis. Obtener un grado superior siempre requiere de un conocimiento más profundo y riguroso sobre determinados temas específicos; no debemos olvidar que cada planteamiento de problema y su respectiva solución deben aportar fáctica o teóricamente en la contribución de mejoras para el conocimiento y su aplicación social.</p>
+<p>Nuestra realidad, que liga con el facilismo, inmediatismo y el poco esfuerzo que promueve para alcanzar la “vida del éxito”, ha invertido esta noble labor, que no exclusivamente faculta a estudiantes universitarios o profesionales; no son pocos los casos de grandes autodidactas que con sus innumerables investigaciones han aportado a toda sociedad. Por ello, estar acreditado ante una institución no es requisito esencial para poder redactar una publicación en nuestra revista: la calidad de un buen trabajo de investigación se sostiene por su propia argumentación, por el manejo y dominio de fuentes, por su método riguroso y por la personalidad ética, seria y responsable de sus investigadores; no está demás agregar el corazón, la voluntad y motivación social que la impulsa.</p>
+<p>El criterio más usado en nuestros programas de investigación está relacionado con la revaloración de nuestros conocimientos ancestrales, su aplicación en un contexto plural de naciones, la accidentada y a la vez particular característica de nuestra geomorfología, la diversidad en flora y fauna, nuestras tradiciones artesanales y manifestaciones culturales que han aportado al desarrollo universal de las civilizaciones.</p> 
+<p>En suma, nuestra revista de la AC Ágora busca promover la investigación en todas las ramas del saber humano: pues consideramos que una visión global, integral y multidisciplinaria de los hechos deben ser tomados en cuenta para la promoción de políticas públicas que todo gobierno comprometido tiene el deber de aplicar. Puede enriquecer el proceso de formación de los estudiantes; ser una guía para los docentes, promover el desarrollo sostenible y, por qué no, una fuente indispensable de conocimiento e información para todo ciudadano.</p>  
+<br>
+<h5>COMITE DEL ÓRGANO ACADÉMICO</h5> 
+              </div>
+            </article>
           </li>
-          <li><a href="#">Navigation - Level 1</a>
-            <ul>
-              <li><a href="#">Navigation - Level 2</a></li>
-              <li><a href="#">Navigation - Level 2</a>
-                <ul>
-                  <li><a href="#">Navigation - Level 3</a></li>
-                  <li><a href="#">Navigation - Level 3</a></li>
-                </ul>
-              </li>
-            </ul>
+          <li id="1" style="display:none">
+            <article>
+              <header>
+                <h2>Nuestra Historia</h2>
+              </header>
+              <div class="comcont">
+                <p>This is an example of a comment made on a post. You can either edit the comment, delete the comment or reply to the comment. Use this as a place to respond to the post or to share what you are thinking.</p>
+              </div>
+            </article>
           </li>
-          <li><a href="#">Navigation - Level 1</a></li>
+          <li id="2" style="display:none">
+            <article>
+              <header>
+                <h2>Principios de Vida en Sociedad</h2>
+              </header>
+              <div class="comcont">
+                <p>This is an example of a comment made on a post. You can either edit the comment, delete the comment or reply to the comment. Use this as a place to respond to the post or to share what you are thinking.</p>
+              </div>
+            </article>
+          </li>
+          <li id="3" style="display:none">
+            <article>
+              <header>
+                <h2>Nuestras Actividades</h2>
+              </header>
+              <div class="comcont">
+                <p>This is an example of a comment made on a post. You can either edit the comment, delete the comment or reply to the comment. Use this as a place to respond to the post or to share what you are thinking.</p>
+              </div>
+            </article>
+          </li>
         </ul>
-      </nav>
-      <div class="sdb_holder">
-        <h6>Lorem ipsum dolor</h6>
-        <address>
-        Full Name<br>
-        Address Line 1<br>
-        Address Line 2<br>
-        Town/City<br>
-        Postcode/Zip<br>
-        <br>
-        Tel: xxxx xxxx xxxxxx<br>
-        Email: <a href="#">contact@domain.com</a>
-        </address>
-      </div>
-      <div class="sdb_holder">
-        <article>
-          <h6>Lorem ipsum dolor</h6>
-          <p>Nuncsed sed conseque a at quismodo tris mauristibus sed habiturpiscinia sed.</p>
-          <ul>
-            <li><a href="#">Lorem ipsum dolor sit</a></li>
-            <li>Etiam vel sapien et</li>
-            <li><a href="#">Etiam vel sapien et</a></li>
-          </ul>
-          <p>Nuncsed sed conseque a at quismodo tris mauristibus sed habiturpiscinia sed. Condimentumsantincidunt dui mattis magna intesque purus orci augue lor nibh.</p>
-          <p class="more"><a href="#">Continue Reading &raquo;</a></p>
-        </article>
       </div>
       <!-- ################################################################################################ -->
     </div>
@@ -203,8 +100,22 @@
     <div class="clear"></div>
   </main>
 </div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+{% endblock %}
 
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
+{% block javascripts %}
+{{ parent() }}
+<script>
+function show(id) {
+    document.getElementById(id).style.display = "block";
+}
+
+function hide(id1, id2, id3) {
+    document.getElementById(id1).style.display = "none";
+    document.getElementById(id2).style.display = "none";
+    document.getElementById(id3).style.display = "none";
+}
+</script>
 {% endblock %}

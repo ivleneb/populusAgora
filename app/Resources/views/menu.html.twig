@@ -7,17 +7,17 @@
         <ul class="nospace">
           <li><a href="#"><i class="fa fa-lg fa-home"></i></a></li>
           <li><a href="{{ path('about') }}" style="color:#FFFFFF;">Nosotros</a></li>
-          <li><a href="{{ path('contact') }}" style="color:#FFFFFF;">Contacto</a></li>
+          <li><a href="#footer{#{{ path('contact') }}#}" style="color:#FFFFFF;">Contacto</a></li>
           <!--<li><a href="{{ path('login') }}">Intranet</a></li>-->
           <!--<li><a href="{{ path('signup') }}">Registrate</a></li>-->
         </ul>
       </div>
-      <div class="fl_right">
+      <!--<div class="fl_right">
         <ul class="nospace">
           <li><i class="fa fa-phone"></i> +511 (01) 345 3768</li>
           <li><i class="fa fa-envelope-o"></i> info@agorapopular.com</li>
         </ul>
-      </div>
+      </div>-->
       <!-- ################################################################################################ -->
     </div>
   </div>
@@ -27,17 +27,17 @@
   <div class="wrapper row1" style="padding-right:10px; padding-left:10px;">
     <header id="header" class="hoc clear"> 
       <!-- ################################################################################################ -->
-      <div id="logo" class="fl_left">
-        <h1><a href="{{path('homepage')}}">AGORA POPULAR</a></h1>
+      <div id="logo" class="fl_left" style="width: 40%; margin:0 auto; text-align: center; padding: 0 20px">
+        <a href="{{path('homepage')}}"><img src="{{asset('public/images/logo_trans_resized.png')}}"></a>
       </div>
       <nav id="mainav" class="fl_right">
         <ul class="clear">
-          <li class="active"><a href="{{ path('homepage') }}">Inicio</a></li>
+          <!--<li class="active"><a href="{{ path('homepage') }}">Inicio</a></li>-->
           <!--<li><a class="drop" href="#">Contenido</a>-->
             <!--<ul>-->
-              <li><a href="{{ path('gallery') }}">Ágora en Imágenes </a></li>
-              <li><a href="{{ path('press') }}">Prensa</a></li>
-              <li><a href="{{ path('activity')}}">Eventos</a></li>
+              <li><a href="{{ path('gallery') }}">TantaKuy</a></li>
+              <li><a href="#{#{{ path('press') }}#}">Prensa</a></li>
+              <li><a href="#{#{{ path('activity')}}#}">Eventos</a></li>
               <li><a href="{{ path('magazine') }}">Revista del Ágora Popular</a></li>
               <!--<li><a href="{{ path('forum') }}">Foro</a></li>-->
               <!--<li><a href="{{ path('apps') }}">Apps y Herramientas</a></li>-->
